@@ -8,17 +8,17 @@ Restart=on-failure
 RestartSec=30
 ExecStartPre=-/usr/bin/docker stop shadow_grafana
 ExecStartPre=-/usr/bin/docker rm shadow_grafana
-ExecStart=/usr/bin/docker run --name shadow_grafana 
-  -p 127.0.0.1:3033:3033
-  -e "GF_SECURITY_ADMIN_PASSWORD__FILE=/etc/openitcockpit/grafana/admin_password"
-  -e "GF_PATHS_CONFIG=/etc/openitcockpit/grafana/grafana.ini"
-  -e "GF_PATHS_DATA=/var/lib/grafana"
-  -e "GF_PATHS_HOME=/usr/share/grafana"
-  -e "GF_PATHS_LOGS=/var/log/grafana"
-  -e "GF_PATHS_PLUGINS=/var/lib/grafana/plugins"
-  -e "GF_PATHS_PROVISIONING=/etc/grafana/provisioning"
-  -v grafana-data:/var/lib/grafana
-  -v /etc/openitcockpit/grafana:/etc/openitcockpit/grafana
+ExecStart=/usr/bin/docker run --name shadow_grafana \
+  -p 127.0.0.1:3033:3033 \
+  -e "GF_SECURITY_ADMIN_PASSWORD__FILE=/etc/openitcockpit/grafana/admin_password" \
+  -e "GF_PATHS_CONFIG=/etc/openitcockpit/grafana/grafana.ini" \
+  -e "GF_PATHS_DATA=/var/lib/grafana" \
+  -e "GF_PATHS_HOME=/usr/share/grafana" \
+  -e "GF_PATHS_LOGS=/var/log/grafana" \
+  -e "GF_PATHS_PLUGINS=/var/lib/grafana/plugins" \
+  -e "GF_PATHS_PROVISIONING=/etc/grafana/provisioning" \
+  -v grafana-data:/var/lib/grafana \
+  -v /etc/openitcockpit/grafana:/etc/openitcockpit/grafana \
   grafana/grafana
 
 
