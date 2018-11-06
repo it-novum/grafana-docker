@@ -18,7 +18,7 @@ docker run -t -i --rm \
   -e "GF_PATHS_PLUGINS=/var/lib/grafana/plugins" \
   -e "GF_PATHS_PROVISIONING=/etc/grafana/provisioning" \
   -v grafana-data:/var/lib/grafana \
-  -v .:/etc/openitcockpit/grafana \
+  -v /etc/openitcockpit/grafana:/etc/openitcockpit/grafana \
   grafana/grafana
 ````
 
