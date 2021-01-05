@@ -1,4 +1,6 @@
-# grafana-docker
+# DISCONTINUED: grafana-docker
+
+Please see: https://github.com/it-novum/graphing-docker
 
 This repository contain all files required to build a "shadow Grafana" for [openITCOCKPIT](https://github.com/it-novum/openITCOCKPIT) as Docker container. 🐳
 
